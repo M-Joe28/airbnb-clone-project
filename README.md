@@ -1,6 +1,6 @@
 # airbnb-clone-project
 
-# Tech stack used in this proect
+# Tech stack used in this project
 
 Django: A high-level Python web framework used for building the RESTful API.
 Django REST Framework: Provides tools for creating and managing RESTful APIs.
