@@ -16,16 +16,41 @@ Payment Processing: Integrate a payment system to handle transactions and record
 Review System: Allow users to leave reviews and ratings for properties.
 Data Optimization: Ensure efficient data retrieval and storage through database optimizations.
 
-# Technology stack used in this project
+# Technology stack 
 
-Django: A high-level Python web framework used for building the RESTful API.
-Django REST Framework: Provides tools for creating and managing RESTful APIs.
-PostgreSQL: A powerful relational database used for data storage.
-GraphQL: Allows for flexible and efficient querying of data.
-Celery: For handling asynchronous tasks such as sending notifications or processing payments.
-Redis: Used for caching and session management.
-Docker: Containerization tool for consistent development and deployment environments.
-CI/CD Pipelines: Automated pipelines for testing and deploying code changes.
+This project leverages a modern technology stack to support scalability, reliability, and maintainability. Below are the core technologies used and their purposes:
+
+Backend
+
+Django – A Python-based web framework used to build the backend logic and RESTful APIs efficiently. It provides built-in authentication, ORM, and admin panel support.
+
+Django REST Framework (DRF) – Extends Django to simplify the creation of RESTful APIs with features like serialization, authentication, and permissions.
+
+GraphQL (via Graphene-Django) – An alternative API query language that allows clients to request only the data they need, improving performance and flexibility.
+
+Database
+
+PostgreSQL – A powerful open-source relational database used for storing structured data such as users, properties, bookings, reviews, and payments.
+
+Frontend
+
+React.js – A JavaScript library for building a dynamic and interactive user interface. It allows seamless integration with the backend through REST or GraphQL APIs.
+
+Tailwind CSS – A utility-first CSS framework used for fast and responsive styling.
+
+DevOps & Deployment
+
+Docker – Used to containerize the application, ensuring consistent environments across development, testing, and production.
+
+GitHub Actions – Provides CI/CD pipelines for automated testing, linting, and deployment.
+
+Heroku / AWS / GCP / Azure – Cloud platforms that can be used to host and scale the application.
+
+Security & Authentication
+
+JWT (JSON Web Tokens) – Provides secure authentication between the client and backend APIs.
+
+HTTPS/TLS – Ensures all data transmitted between the client and server is encrypted.
 
 # Team Roles
 Backend Developer: Responsible for implementing API endpoints, database schemas, and business logic.
