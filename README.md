@@ -16,7 +16,7 @@ Payment Processing: Integrate a payment system to handle transactions and record
 Review System: Allow users to leave reviews and ratings for properties.
 Data Optimization: Ensure efficient data retrieval and storage through database optimizations.
 
-# Technology stack 
+# Technology Stack 
 
 This project leverages a modern technology stack to support scalability, reliability, and maintainability. Below are the core technologies used and their purposes:
 
@@ -58,7 +58,7 @@ Database Administrator: Manages database design, indexing, and optimizations.
 DevOps Engineer: Handles deployment, monitoring, and scaling of the backend services.
 QA Engineer: Ensures the backend functionalities are thoroughly tested and meet quality standards.
 
-# Database design
+# Database Design
 The database is structured to handle the core functionality of the Airbnb Clone project. It ensures proper management of users, properties, bookings, reviews, and payments, while maintaining relationships between them.
 
 Entities & Fields
