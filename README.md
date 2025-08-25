@@ -1,6 +1,6 @@
 # airbnb-clone-project
 
-# A brief description of this project 
+## A brief description of this project 
 
 The Airbnb Clone Project is a comprehensive, 
 real-world application designed to simulate the development of a robust booking platform like Airbnb.
@@ -8,7 +8,7 @@ It involves a deep dive into full-stack development,
 focusing on backend systems, database design, 
 API development, and application security.
 
-# Project goals
+## Project goals
 User Management: Implement a secure system for user registration, authentication, and profile management.
 Property Management: Develop features for property listing creation, updates, and retrieval.
 Booking System: Create a booking mechanism for users to reserve properties and manage booking details.
@@ -41,7 +41,7 @@ This project uses a modern technology stack to ensure scalability, performance, 
 - **JWT (JSON Web Tokens)** – Secures user authentication between client and server.  
 - **HTTPS/TLS** – Encrypts communication to protect sensitive user and payment data.  
 
-# Team Roles
+## Team Roles
 Backend Developer: Responsible for implementing API endpoints, database schemas, and business logic.
 Database Administrator: Manages database design, indexing, and optimizations.
 DevOps Engineer: Handles deployment, monitoring, and scaling of the backend services.
@@ -98,7 +98,7 @@ The database is designed to manage users, properties, bookings, reviews, and pay
 - **Property → Reviews**: One-to-Many (a property can have multiple reviews).  
 - **Booking → Payment**: One-to-One (each booking has one payment).  
 
-# Feature Breakdown
+## Feature Breakdown
 Feature Breakdown
 
 This project replicates the core functionality of an Airbnb project. Below are the main features and their purpose within the system:
@@ -122,7 +122,7 @@ After completing a stay, guests can leave reviews and ratings for properties. Th
 5. Payment Processing
 
 Each booking is linked to a payment record, allowing guests to pay securely for their stay. Payments include details such as amount, date, and status, ensuring transparency between guests and hosts.
-# API Security
+## API Security
 API Security
 
 Securing the backend APIs is critical to protect sensitive user data, ensure trust, and maintain the integrity of the platform. The following measures will be implemented:
@@ -151,7 +151,7 @@ All incoming requests will be validated and sanitized to prevent common vulnerab
 
 Payment-related APIs will integrate with trusted third-party providers and follow PCI-DSS standards. This ensures financial transactions are processed safely, protecting both guests and hosts from fraud.
 
-# CI/CD Pipeline
+## CI/CD Pipeline
 Continuous Integration and Continuous Deployment (CI/CD) pipelines automate the process of building, testing, and deploying the application. They ensure that new changes are integrated smoothly, tested automatically, and deployed consistently without manual intervention.
 
 Implementing CI/CD is important for this project because it improves development speed, reduces errors, and ensures that new features or fixes reach users quickly and reliably.
