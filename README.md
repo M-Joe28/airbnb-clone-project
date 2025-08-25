@@ -49,54 +49,61 @@ QA Engineer: Ensures the backend functionalities are thoroughly tested and meet 
 
 ## Database Design  
 
-The database is designed to manage users, properties, bookings, reviews, and payments. Each entity stores critical information and maintains relationships with other entities to ensure data consistency.  
+Database Design
 
-### Entities & Fields  
+The database is structured to support the main features of the Airbnb Clone project. It includes the following key entities: Users, Properties, Bookings, Reviews, and Payments. Each entity contains essential fields, and relationships define how they connect to one another.
 
-#### 1. Users  
-- `id` (Primary Key)  
-- `name`  
-- `email`  
-- `password_hash`  
-- `role` (guest, host, admin)  
+Users
+Field	Type	Description
+id	Integer (PK)	Unique identifier for each user
+name	String	Full name of the user
+email	String	User’s email address (unique)
+password_hash	String	Encrypted password
+role	String	Role of the user (guest, host, admin)
 
-#### 2. Properties  
-- `id` (Primary Key)  
-- `user_id` (Foreign Key → Users)  
-- `title`  
-- `description`  
-- `location`  
-- `price_per_night`  
+Relationship: A user can be a guest (who makes bookings) or a host (who lists properties). A user can also leave multiple reviews.
 
-#### 3. Bookings  
-- `id` (Primary Key)  
-- `property_id` (Foreign Key → Properties)  
-- `user_id` (Foreign Key → Users)  
-- `check_in_date`  
-- `check_out_date`  
-- `status` (pending, confirmed, cancelled)  
+Properties
+Field	Type	Description
+id	Integer (PK)	Unique identifier for each property
+user_id	Integer (FK)	References the host (Users)
+title	String	Property title
+description	Text	Details about the property
+location	String	Address or location of the property
+price_per_night	Decimal	Nightly rental price
 
-#### 4. Reviews  
-- `id` (Primary Key)  
-- `user_id` (Foreign Key → Users)  
-- `property_id` (Foreign Key → Properties)  
-- `rating` (1–5)  
-- `comment`  
+Relationship: A property belongs to one host (user). A property can have many bookings and reviews.
 
-#### 5. Payments  
-- `id` (Primary Key)  
-- `booking_id` (Foreign Key → Bookings)  
-- `amount`  
-- `payment_date`  
-- `status` (paid, refunded, pending)  
+Bookings
+Field	Type	Description
+id	Integer (PK)	Unique identifier for each booking
+property_id	Integer (FK)	References the booked property (Properties)
+user_id	Integer (FK)	References the guest (Users)
+check_in_date	Date	Check-in date
+check_out_date	Date	Check-out date
+status	String	Booking status (pending, confirmed, cancelled)
 
-### Entity Relationships  
-- **User → Properties**: One-to-Many (a host can list many properties).  
-- **User → Bookings**: One-to-Many (a guest can make multiple bookings).  
-- **Property → Bookings**: One-to-Many (a property can be booked many times).  
-- **User → Reviews**: One-to-Many (a user can write multiple reviews).  
-- **Property → Reviews**: One-to-Many (a property can have multiple reviews).  
-- **Booking → Payment**: One-to-One (each booking has one payment).  
+Relationship: A booking is created by a user (guest) for a specific property. Each booking is linked to exactly one payment.
+
+Reviews
+Field	Type	Description
+id	Integer (PK)	Unique identifier for each review
+user_id	Integer (FK)	References the reviewer (Users)
+property_id	Integer (FK)	References the property (Properties)
+rating	Integer	Rating value (1–5)
+comment	Text	Review comment
+
+Relationship: A review is written by a user for a property. A property can have multiple reviews, but a user can leave only one review per property after a stay.
+
+Payments
+Field	Type	Description
+id	Integer (PK)	Unique identifier for each payment
+booking_id	Integer (FK)	References the related booking (Bookings)
+amount	Decimal	Payment amount
+payment_date	Date	Date of the payment
+status	String	Payment status (paid, refunded, pending)
+
+Relationship: Each booking has exactly one payment record. 
 
 ## Feature Breakdown
 Feature Breakdown
