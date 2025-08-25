@@ -41,7 +41,6 @@ This project uses a modern technology stack to ensure scalability, performance, 
 - **JWT (JSON Web Tokens)** – Secures user authentication between client and server.  
 - **HTTPS/TLS** – Encrypts communication to protect sensitive user and payment data.  
 
-
 # Team Roles
 Backend Developer: Responsible for implementing API endpoints, database schemas, and business logic.
 Database Administrator: Manages database design, indexing, and optimizations.
