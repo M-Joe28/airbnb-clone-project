@@ -16,11 +16,11 @@ Payment Processing: Integrate a payment system to handle transactions and record
 Review System: Allow users to leave reviews and ratings for properties.
 Data Optimization: Ensure efficient data retrieval and storage through database optimizations.
 
-# Technology Stack 
+## Technology Stack 
 
 This project leverages a modern technology stack to support scalability, reliability, and maintainability. Below are the core technologies used and their purposes:
 
-Backend
+### Backend
 
 Django – A Python-based web framework used to build the backend logic and RESTful APIs efficiently. It provides built-in authentication, ORM, and admin panel support.
 
@@ -28,17 +28,17 @@ Django REST Framework (DRF) – Extends Django to simplify the creation of RESTf
 
 GraphQL (via Graphene-Django) – An alternative API query language that allows clients to request only the data they need, improving performance and flexibility.
 
-Database
+### Database
 
 PostgreSQL – A powerful open-source relational database used for storing structured data such as users, properties, bookings, reviews, and payments.
 
-Frontend
+### Frontend
 
 React.js – A JavaScript library for building a dynamic and interactive user interface. It allows seamless integration with the backend through REST or GraphQL APIs.
 
 Tailwind CSS – A utility-first CSS framework used for fast and responsive styling.
 
-DevOps & Deployment
+### DevOps & Deployment
 
 Docker – Used to containerize the application, ensuring consistent environments across development, testing, and production.
 
@@ -46,7 +46,7 @@ GitHub Actions – Provides CI/CD pipelines for automated testing, linting, and 
 
 Heroku / AWS / GCP / Azure – Cloud platforms that can be used to host and scale the application.
 
-Security & Authentication
+## Security & Authentication
 
 JWT (JSON Web Tokens) – Provides secure authentication between the client and backend APIs.
 
@@ -58,7 +58,7 @@ Database Administrator: Manages database design, indexing, and optimizations.
 DevOps Engineer: Handles deployment, monitoring, and scaling of the backend services.
 QA Engineer: Ensures the backend functionalities are thoroughly tested and meet quality standards.
 
-# Database Design
+## Database Design
 The database is structured to handle the core functionality of the Airbnb Clone project. It ensures proper management of users, properties, bookings, reviews, and payments, while maintaining relationships between them.
 
 Entities & Fields
