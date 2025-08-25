@@ -48,55 +48,57 @@ Database Administrator: Manages database design, indexing, and optimizations.
 DevOps Engineer: Handles deployment, monitoring, and scaling of the backend services.
 QA Engineer: Ensures the backend functionalities are thoroughly tested and meet quality standards.
 
-# Database Design
-The database is structured to handle the core functionality of the Airbnb Clone project.
-It ensures proper management of users, properties, bookings, reviews, and payments, 
-while maintaining relationships between them.
-Entities & Fields
-1. Users
-id (Primary Key)
-name
-email
-password_hash
-role (guest, host, admin)
-Notes: A user can act as a guest (book properties) or a host (list properties).
-2. Properties
-id (Primary Key)
-user_id (Foreign Key → Users)
-title
-description
-location
-price_per_night
-Notes: A property belongs to one host (user) and can be booked multiple times.
-3. Bookings
-id (Primary Key)
-property_id (Foreign Key → Properties)
-user_id (Foreign Key → Users)
-check_in_date
-check_out_date
-status (pending, confirmed, cancelled)
-Notes: A booking is made by a guest for a specific property.
-4. Reviews
-id (Primary Key)
-user_id (Foreign Key → Users)
-property_id (Foreign Key → Properties)
-rating (1–5)
-comment
-Notes: Guests can leave reviews after a completed stay. Properties can have multiple reviews.
-5. Payments
-id (Primary Key)
-booking_id (Foreign Key → Bookings)
-amount
-payment_date
-status (paid, refunded, pending)
-Notes: Each booking has one corresponding payment record.
-Entity Relationships
-User → Properties: One-to-Many (a host can list many properties).
-User → Bookings: One-to-Many (a guest can make multiple bookings).
-Property → Bookings: One-to-Many (a property can be booked many times).
-User → Reviews: One-to-Many (a user can write multiple reviews).
-Property → Reviews: One-to-Many (a property can have multiple reviews).
-Booking → Payment: One-to-One (each booking has one payment).
+## Database Design  
+
+The database is designed to manage users, properties, bookings, reviews, and payments. Each entity stores critical information and maintains relationships with other entities to ensure data consistency.  
+
+### Entities & Fields  
+
+#### 1. Users  
+- `id` (Primary Key)  
+- `name`  
+- `email`  
+- `password_hash`  
+- `role` (guest, host, admin)  
+
+#### 2. Properties  
+- `id` (Primary Key)  
+- `user_id` (Foreign Key → Users)  
+- `title`  
+- `description`  
+- `location`  
+- `price_per_night`  
+
+#### 3. Bookings  
+- `id` (Primary Key)  
+- `property_id` (Foreign Key → Properties)  
+- `user_id` (Foreign Key → Users)  
+- `check_in_date`  
+- `check_out_date`  
+- `status` (pending, confirmed, cancelled)  
+
+#### 4. Reviews  
+- `id` (Primary Key)  
+- `user_id` (Foreign Key → Users)  
+- `property_id` (Foreign Key → Properties)  
+- `rating` (1–5)  
+- `comment`  
+
+#### 5. Payments  
+- `id` (Primary Key)  
+- `booking_id` (Foreign Key → Bookings)  
+- `amount`  
+- `payment_date`  
+- `status` (paid, refunded, pending)  
+
+### Entity Relationships  
+- **User → Properties**: One-to-Many (a host can list many properties).  
+- **User → Bookings**: One-to-Many (a guest can make multiple bookings).  
+- **Property → Bookings**: One-to-Many (a property can be booked many times).  
+- **User → Reviews**: One-to-Many (a user can write multiple reviews).  
+- **Property → Reviews**: One-to-Many (a property can have multiple reviews).  
+- **Booking → Payment**: One-to-One (each booking has one payment).  
+
 
 # Feature Breakdown
 Feature Breakdown
