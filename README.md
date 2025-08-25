@@ -98,7 +98,6 @@ The database is designed to manage users, properties, bookings, reviews, and pay
 - **Property → Reviews**: One-to-Many (a property can have multiple reviews).  
 - **Booking → Payment**: One-to-One (each booking has one payment).  
 
-
 # Feature Breakdown
 Feature Breakdown
 
