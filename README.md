@@ -17,39 +17,22 @@ Review System: Allow users to leave reviews and ratings for properties.
 Data Optimization: Ensure efficient data retrieval and storage through database optimizations.
 
 ## Technology Stack 
-
 This project leverages a modern technology stack to support scalability, reliability, and maintainability. Below are the core technologies used and their purposes:
-
 ### Backend
-
 Django – A Python-based web framework used to build the backend logic and RESTful APIs efficiently. It provides built-in authentication, ORM, and admin panel support.
-
 Django REST Framework (DRF) – Extends Django to simplify the creation of RESTful APIs with features like serialization, authentication, and permissions.
-
 GraphQL (via Graphene-Django) – An alternative API query language that allows clients to request only the data they need, improving performance and flexibility.
-
 ### Database
-
 PostgreSQL – A powerful open-source relational database used for storing structured data such as users, properties, bookings, reviews, and payments.
-
 ### Frontend
-
 React.js – A JavaScript library for building a dynamic and interactive user interface. It allows seamless integration with the backend through REST or GraphQL APIs.
-
 Tailwind CSS – A utility-first CSS framework used for fast and responsive styling.
-
 ### DevOps & Deployment
-
 Docker – Used to containerize the application, ensuring consistent environments across development, testing, and production.
-
 GitHub Actions – Provides CI/CD pipelines for automated testing, linting, and deployment.
-
 Heroku / AWS / GCP / Azure – Cloud platforms that can be used to host and scale the application.
-
 ## Security & Authentication
-
 JWT (JSON Web Tokens) – Provides secure authentication between the client and backend APIs.
-
 HTTPS/TLS – Ensures all data transmitted between the client and server is encrypted.
 
 # Team Roles
@@ -60,94 +43,50 @@ QA Engineer: Ensures the backend functionalities are thoroughly tested and meet 
 
 ## Database Design
 The database is structured to handle the core functionality of the Airbnb Clone project. It ensures proper management of users, properties, bookings, reviews, and payments, while maintaining relationships between them.
-
 Entities & Fields
 1. Users
-
 id (Primary Key)
-
 name
-
 email
-
 password_hash
-
 role (guest, host, admin)
-
 Notes: A user can act as a guest (book properties) or a host (list properties).
-
 2. Properties
-
 id (Primary Key)
-
 user_id (Foreign Key → Users)
-
 title
-
 description
-
 location
-
 price_per_night
-
 Notes: A property belongs to one host (user) and can be booked multiple times.
-
 3. Bookings
-
 id (Primary Key)
-
 property_id (Foreign Key → Properties)
-
 user_id (Foreign Key → Users)
-
 check_in_date
-
 check_out_date
-
 status (pending, confirmed, cancelled)
-
 Notes: A booking is made by a guest for a specific property.
-
 4. Reviews
-
 id (Primary Key)
-
 user_id (Foreign Key → Users)
-
 property_id (Foreign Key → Properties)
-
 rating (1–5)
-
 comment
-
 Notes: Guests can leave reviews after a completed stay. Properties can have multiple reviews.
-
 5. Payments
-
 id (Primary Key)
-
 booking_id (Foreign Key → Bookings)
-
 amount
-
 payment_date
-
 status (paid, refunded, pending)
-
 Notes: Each booking has one corresponding payment record.
-
 Entity Relationships
-
 User → Properties: One-to-Many (a host can list many properties).
-
 User → Bookings: One-to-Many (a guest can make multiple bookings).
-
 Property → Bookings: One-to-Many (a property can be booked many times).
-
 User → Reviews: One-to-Many (a user can write multiple reviews).
-
 Property → Reviews: One-to-Many (a property can have multiple reviews).
-
 Booking → Payment: One-to-One (each booking has one payment).
 
 # Feature Breakdown
